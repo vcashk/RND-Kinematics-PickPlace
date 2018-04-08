@@ -194,17 +194,9 @@ The IK problem is solved!
 #### 1. Fill in the `IK_server.py` file with properly commented python code for calculating Inverse Kinematics based on previously performed Kinematic Analysis. Your code must guide the robot to successfully complete 8/10 pick and place cycles. Briefly discuss the code you implemented and your results. 
 
 ##### Techniques Used
-
-Creating a debugging script. I initially created my own, but `IK_debug.py` was equally fantastic. `IK_debug.py` has been a tremendous help in succeeding in this project. Since the simulation takes a very long time to operate, `IK_server.py` grows tiresome to work on directly. So `IK_debug.py` contains a bunch of cases against which the code output can be compared. 
+`IK_debug.py` has been a tremendous help in succeeding in this project, here the simulation takes a very long time hences  `IK_debug.py` contains a bunch of cases against which the code output can be compared. 
 
 Moving the `sympy` math out of the `for` loop. Creating the necessary transformation matrices takes a long time. Since this creation process needs to happen only once, it is removed from the loop. This reduces the run time significantly.
 
 Including the Forward Kinematics FK in `IK_debug.py`. Since an arm can have multiple orientations, the errors in `IK_debug.py` can be non zero signifying that the angles are incorrect even if the arm is correct. An arm can still reach the correct EE in different orientations. Therefore, by including FK calculations, we can use the calculated angles to see if the correct EE is reached.
-
-##### Reflections
-
-If I were to redo the project from scratch. I would start by immediately creating a debug script to use. I would also take more time in understanding how to use RViz and Gazebo before jumping in. All in all, this has been a tough and tiresome project, but I learned much and more. 10/10 would do again.
-
-
-
 
